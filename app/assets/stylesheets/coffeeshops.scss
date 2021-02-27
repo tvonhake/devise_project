@@ -1,3 +1,127 @@
 // Place all the styles related to the coffeeshops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body{
+  background-color: rgb(39, 46, 43);
+  color: rgb(207, 207, 207);
+}
+
+.main{
+  color: rgb(207, 207, 207);
+  background-color: rgb(39, 46, 43);
+  font-family: sans-serif;
+}
+
+.nav{
+  padding-bottom: 20px;
+}
+
+//styling for individual item boxes in pages (department(s).js, item(s).js)
+.item-container{
+  color: rgb(207, 207, 207);
+  background-color: rgb(29, 36, 33);
+  border: 3px solid rgb(207, 207, 207);
+  border-radius: 10px;
+  padding: 0px 20px 20px 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  box-shadow: 2px 2px 4px 4px #00000013;
+}
+
+//coloring for <hr> line in item-containers
+hr.itemSeparator {
+  border: 1px solid rgb(207, 207, 207);
+}
+
+//general styling for links eg: nav
+a {
+  margin-left: 10px;
+  margin-top: 10px;
+  border: 1px solid rgb(60, 67, 77);
+  border-radius: 5px;
+  color: rgb(207, 207, 207);
+  background-color:rgb(60, 67, 77);
+  padding: 8px;
+  text-decoration: none;
+}
+
+//link hover change color
+a:hover{
+  background-color: rgb(72, 111, 167);
+}
+
+//add padding between item-containers
+.item-content{
+  padding-bottom: 10px;
+}
+
+
+//style input text and number fields
+input[type=text]{
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid rgb(39, 46, 43); 
+  background-color: #f1f1f1 ;
+  border-radius: 5px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+}
+
+input[type=number]{
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid rgb(39, 46, 43); 
+  background-color: #f1f1f1 ;
+  border-radius: 5px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+}
+
+
+//submit button styling (only in forms, see create/edit)
+button[type=submit] {
+  background-color: rgb(60, 67, 77);
+  color: rgb(207, 207, 207);
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button[type=submit]:hover {
+  background-color: rgb(72, 111, 167);
+}
+
+//reset button styling (only in forms, see create/edit)
+button[type=reset] {
+  background-color: rgb(60, 67, 77);
+  color: rgb(207, 207, 207);
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+button[type=reset]:hover {
+  background-color: rgb(72, 111, 167);
+}
+
+
+//add background and coloring to create/edit forms
+.inputForm {
+  color: rgb(207, 207, 207);
+  background-color: rgb(39, 46, 43);
+  border: 3px solid rgb(60, 67, 77);
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  box-shadow: 2px 2px 4px 4px #00000013;
+  border-radius: 5px;
+}
+
