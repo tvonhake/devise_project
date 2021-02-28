@@ -8,11 +8,16 @@
 require 'faker'
 
 Coffeeshop.destroy_all
+Roast.destroy_all
 
 5.times do
-  Coffeeshop.create(name: Faker::FunnyName.name, location: Faker::Address.city)
+  foo = Coffeeshop.create(name: Faker::FunnyName.name, location: Faker::Address.city)
+  4.times do
+    foo.roasts.create(name: Faker::Name.first_name, profile: Faker::Food.description)
+  end
 
 end
 
 puts "seeded #{Coffeeshop.all.size} Coffee Shops"
 puts "first Coffee Shop name: #{Coffeeshop.first.name}"
+puts "seeded #{Roast.all.size} Roasts in #{Coffeeshop.all.size} Coffee Shops"

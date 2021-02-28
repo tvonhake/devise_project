@@ -13,9 +13,9 @@ const CoffeeShops = (props) =>{
             <hr className="itemSeparator"></hr>
           </div>
 
-          {/* <a href={`/departments/${coffeeshop.id}/roasts`}>Open this Coffee Shop</a> */}
-          <a href={`/departments/${coffeeshop.id}/edit`}>Edit Coffee Shop Details</a>
-          <a href={`/departments/${coffeeshop.id}/`} data-method='delete'>Delete Coffee Shop</a>
+          <a href={`/coffeeshops/${coffeeshop.id}/roasts`}>Open this Coffee Shop</a>
+          <a href={`/coffeeshops/${coffeeshop.id}/edit`}>Edit Coffee Shop Details</a>
+          <a href={`/coffeeshops/${coffeeshop.id}/`} data-method='delete'>Delete Coffee Shop</a>
           
         </div>
       )
