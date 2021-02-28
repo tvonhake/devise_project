@@ -6,14 +6,14 @@ const Coffeeshop = (props) =>{
       return(
         <div className="item-container">
           <div className="item-content">
-            <h2>Name: {roast.name}</h2>
+            <h2>Roast Name: {roast.name}</h2>
             <p>Id: {roast.id}</p>
             <p>Flavor Profile: {roast.profile}</p>
             <hr class="itemSeparator"></hr>
           </div>
 
-          {/* <a href={`/coffeeshops/${props.coffeeshop.id}/roasts/${item.id}`}>Open this item</a>
-          <a href={`/coffeeshops/${props.coffeeshop.id}/roasts/${item.id}/edit`}>Edit this item</a> */}
+          <a href={`/coffeeshops/${props.coffeeshop.id}/roasts/${roast.id}`}>Open this Roast</a>
+          <a href={`/coffeeshops/${props.coffeeshop.id}/roasts/${roast.id}/edit`}>Edit this Roast</a>
         
         
         </div>

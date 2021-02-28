@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
   root "coffeeshops#index"
-  resources :coffeeshops
+  resources :coffeeshops do
+    resources :roasts
+  end
 end

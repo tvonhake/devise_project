@@ -5,7 +5,9 @@ class RoastsController < ApplicationController
     @roasts = @coffeeshop.roasts
 
     puts @roasts
-    render component: "roasts",  props: {roasts: @roasts, coffeeshop: @coffeeshop}
+    #here we can render coffeeshop because it shows the list of all roasts in a specific shop
+    #eliminating the need for a "roasts" component (roasts.js)
+    render component: "coffeeshop",  props: {roasts: @roasts, coffeeshop: @coffeeshop}
   end
 
   def show
@@ -24,7 +26,7 @@ class RoastsController < ApplicationController
 
   def create
     @coffeeshop = Coffeeshop.find(params[:coffeeshop_id])
-    roast = @coffeeshop.roasts.new(roast_params) 
+    roast = @coffeeshop.roasts.new(name: params[:roast][:name], profile: params[:roast][:profile])
     
     if roast.save
       redirect_to coffeeshop_roasts_path
@@ -42,7 +44,7 @@ class RoastsController < ApplicationController
 
   def update
     roast = Roast.find(params[:id])
-    if roast.update(quantity: params[:roast][:quantity], comment: params[:roast][:comment])
+    if roast.update(name: params[:roast][:name], profile: params[:roast][:profile])
       redirect_to coffeeshop_roasts_path
     else 
       render component: "roast_edit", props: {coffeeshop: @coffeeshop, roasts: @roasts}
